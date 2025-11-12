@@ -1,0 +1,177 @@
+:root {
+  font-size: 62.5%;
+  --primary-color: #3EA1DB; /* Azul Claro */
+  --secondary-color: #574AE8; /* Roxo */
+  --background-color: #F3F5F7; /* Cinza Claro */
+  --text-color: #1A202C; /* Cinza Escuro */
+  --highlight-color: #FF6B6B; /* Vermelho */
+  --white-color: #FFFFFF; /* Branco */
+  --gray-color: #CBD5E0; /* Cinza Médio */
+  --gray-dark: #717171; /* Cinza Escuro */
+}
+
+/* Para telas pequenas, como smartphones */
+@media screen and (max-width: 576px) {
+  :root {
+    font-size: 55%; /* 1rem = 8.8px */
+  }
+}
+
+/* Para tablets e telas maiores */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  :root {
+    font-size: 60%; /* 1rem = 9.6px */
+  }
+}
+
+/* Para desktops */
+@media screen and (min-width: 769px) {
+  :root {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary-color);
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header-container-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4.8rem;
+  margin-bottom: 4.1rem;
+  font-size: 2rem;
+}
+
+.header-container-title h1{
+  color: var(--white-color)
+}
+
+.header-container-title h2 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 2.5rem;
+  color: var(--white-color);
+  font-weight: 400;
+}
+
+.header-container-search {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: .0625rem solid rgba(0, 0, 0, 0.1);
+  height: 50px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--white-color);
+}
+
+.header-container-search input {
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+
+.header-container-search input::placeholder {
+  color: var(--gray-dark);
+}
+
+.header-container-search input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.header-container-search button{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.posts{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+.feed-news ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  padding: 0;
+}
+.feed-news ul li{
+  border-bottom: 1px solid #574AE8;
+}
+
+.feed-news ul li h2, p{
+  font-family: Roboto;
+  font-size: 1.5rem;
+}
+
+/* Estilização da data de publicação */
+.feed-news ul li small{
+  font-size: 12px;
+  color: #999;
+}
+
+/* @media screen and (min-width: 375px){
+  .feed-news ul li h2, p{
+    font-size: 2rem;
+  }
+} */
+
+@media screen and (max-width: 576px) {
+  .header-container-title h2 {
+    font-size: 2rem;
+  }
+
+  .feed-news ul li h2, p {
+    font-size: 1.2rem;
+  }
+
+  .feed-news ul li small {
+    font-size: 1rem;
+  }
+}
+
+/* Ajuste para tablets */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .header-container-title h2 {
+    font-size: 2.2rem;
+  }
+
+  .feed-news ul li h2, p {
+    font-size: 1.4rem;
+  }
+
+  .feed-news ul li small {
+    font-size: 1.1rem;
+  }
+}
